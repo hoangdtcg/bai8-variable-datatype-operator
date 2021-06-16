@@ -1,0 +1,83 @@
+<!-- 
+    - Biến
+        - Đại diện cho 1 ô nhớ chứa giá trị
+        - Tên biến đặt theo quy tắc camel (snake)
+            - Ký tự đầu tiên viết thường
+            - Các từ sau thì chữ đầu viết Hoa
+        - Khi đặt tên biến nên đặt có ý nghĩa
+        - Đặt tên biến ngắn gọn (2-3 từ)
+        - Tên biến nên là danh từ hoặc tính từ.(color, speed)
+        - Quy tắc: 
+            - Có chứa a-z, 1-9 và _;
+            - Không bắt đầu bằng chữ số.
+        - Có 3 cách khai báo biến:
+            - var - biến toàn cục // không nên dùng var dưới mọi trường hợp
+            - let - biến cục bộ
+            - const - hằng số - không thay đổi được giá trị
+    - Kiểu dữ liệu: 7 Kiểu dữ liệu nguyên thuỷ
+        - Number:
+            - Số nguyên (int): 1,2,3,4
+            - Số thực (float): 1.2, 2.5, 3.14...
+        - Chữ:
+            - Ký tự (char): 'a','b','c','d'..
+            - Chuỗi (string):'hello',"abc"...
+        - Boolean: Đúng/Sai (true/ false)
+        - null : rỗng
+        - undefined: không xác định
+
+    - Toán tử
+        - Toán tử số học
+            - +,-,*,/,%, **
+        - Toán tử so sánh
+            - >,<,>=,<=,!=,==
+                - ==:
+                - ===:
+        - Toán tử gán:
+            - =
+        - Toán tử logic: Tập hợp của nhiều so sánh
+            - && : tất cả các biểu thức so sánh con phải đúng mới true
+            - || : chỉ cần 1 biểu thức so sánh đúng là true
+
+    Cách 1 chương trình hoạt động -> từ trên xuống dưới
+ -->
+
+ let a = 5;
+ let number = 5;
+ let dayOfWeek = 7;
+ let nhi = "Nguyen Ngoc Nhi";
+ <!-- let 2day = 2; Sai--> 
+ Đặt 5 tên và 5 tên biến sai.
+
+ Giá trị:
+    - số
+    - chữ -> "", ''
+    - boolean
+Biểu thức:
+a + b * c = d;
+a,b: toán hạng
++,*,= : toán tử
+a**10 || Math.pow(a,10)
+
+1+1 => Giá trị số (chuỗi)
+
+1 >= 2 => Boolean => nằm trong câu lệnh if
+    1 == 1 => true
+    '1' == 1 => true (chỉ so sánh giá trị)
+    '1' === 1 => false (so sánh cả kiểu dữ liệu)
+    2 != 1 => true
+    a == b => a có bằng b hay không?
+    a != b => a có khác b hay không? 
+
+5 == 5 && 1 == '1' => true
+5 == 4 && 1 == '1' => false
+
+(5 == 4 || 1 == '1') => true
+
+const a = 5;
+a = 6; -> lỗi
+const PI = 3.14;
+{}: scope - đợi đến bài vòng lặp
+
+NEXT LESSON: 
+Thực hành: Làm máy tính google. - 1h30p
+Thảo luận: Học lập trình. - 30p

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Caculator</title>
+</head>
+<style>
+    button {
+        background: #518428;
+        color: #fff;
+        font-weight: bold;
+        font-size: 26px;
+        padding: 10px 20px;
+        margin: 0px;
+        font-size: 16px;
+    }
+
+    .abc {
+        border: 1px solid #044284;
+        border-radius: 2px;
+        box-shadow: 1px 1px 2px #666;
+        font-size: 16px;
+    }
+
+    /* 
+        - Tên thẻ: input, p, button
+        - ID: #ten_id - duy nhất
+        - Class: .ten_class - nhóm
+     */
+</style>
+<body>
+    <form>
+        <fieldset>
+            <h1>BMI Calculator</h1>
+            <label for="chieu-cao">Chiều cao</label>
+            <input class="abc" type="number" id='chieu-cao' placeholder="cm" value="">
+            <label for="chieu-cao">Cân nặng</label>
+            <input class="abc" type="number" id='can-nang' placeholder="kg">
+            <button type="button" onclick="bmiCalculator()">Gửi</button>
+            <p id="ket-qua"></p>
+            <p id="ket-luan"></p>
+        </fieldset>
+    </form>
+    <script>
+        function bmiCalculator(){
+            let weight = document.getElementById('can-nang').value;
+            let height = document.getElementById('chieu-cao').value/100;
+            let ketLuan = document.getElementById("ket-luan");
+            let ketQua = document.getElementById("ket-qua");
+
+            // bmi = weight / (height * height);
+            bmi = weight / Math.pow(height,2);
+
+            if(weight == "" || height == ""){
+                alert("Vui lòng nhập cân nặng và chiều cao");
+            }else{
+                ketQua.innerText = "Chỉ số BMI: " + bmi.toFixed(2);
+                if(bmi < 16){
+                    ketLuan.innerText = 'Siêu gầy'; 
+                }
+                if(bmi >= 16 && bmi < 17){
+                    ketLuan.innerText = 'Khá gầy';
+                }
+
+                if(bmi >= 17 && bmi < 18.5){
+                    ketLuan.innerText = 'Hơi gầy';
+                }
+
+                if(bmi >= 18.5 && bmi < 25){
+                    ketLuan.innerText = 'Bình thường - hoàn hảo';
+                }
+                if(bmi >= 25 && bmi < 30){
+                    ketLuan.innerText = 'Hơi béo';
+                }
+                if(bmi >= 30){
+                    ketLuan.innerText = 'Bạn quá béo, giảm cân gấp';
+                }
+            }
+
+
+        }
+    </script>
+</body>
+</html>
